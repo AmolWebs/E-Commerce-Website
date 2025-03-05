@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body{
+  background-color: rgb( 255, 253, 208);
+}
+
+
 a.active hr{
   display:block;
 }
