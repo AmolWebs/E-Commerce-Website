@@ -13,12 +13,30 @@ import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
-
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+import { FaInstagram } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
+import FloatingInstagramButton from './components/FloatingInstagramButton';
+
+
+
 
 const App = () => {
   return (
+
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]' >
+
+      <FloatingWhatsApp
+        phoneNumber="8767969429"  // Replace with your WhatsApp number
+        accountName="Support Team" // Name shown in chat
+        avatar="/step-img.jpg " // Optional: profile picture
+        statusMessage="Typically replies within an hour" // Custom status
+        chatMessage="Hello! How can we help you?" // Default chat message
+        allowEsc // Close chat with ESC key
+        allowClickAway // Close chat when clicking outside
+        notification // Show notification badge
+      />
+      <FloatingInstagramButton /> {/* Add Instagram Button */}
       <ToastContainer />
       <Navbar />
       <SearchBar />
@@ -34,6 +52,7 @@ const App = () => {
         <Route path='/orders' element={<Orders />} />
         <Route path='/verify' element={<Verify />} />
       </Routes>
+
       <Footer />
     </div>
   )
