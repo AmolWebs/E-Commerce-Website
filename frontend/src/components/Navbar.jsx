@@ -19,7 +19,7 @@ const Navbar = () => {
     <div className='flex items-center justify-between py-5 font-medium' >
 
         <Link to='/'>
-        <h1 className='text-2xl sm:text-3xl lg:text-3xl' >StepTo<span className='text-red-500' ><span className='text-3xl sm:text-4xl lg:text-4xl' >Royal</span></span> </h1>
+        <img className='w-24 rounded-full' src="/step-img.jpg" alt="" />
         </Link>
 
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700' >
