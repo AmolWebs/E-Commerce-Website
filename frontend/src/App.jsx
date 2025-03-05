@@ -24,7 +24,7 @@ import FloatingInstagramButton from './components/FloatingInstagramButton';
 const App = () => {
   return (
 
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]' >
+    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] relative' >
 
       <FloatingWhatsApp
         phoneNumber="8767969429"  // Replace with your WhatsApp number

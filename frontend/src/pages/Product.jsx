@@ -27,6 +27,20 @@ const Product = () => {
   }, [productId, products])
 
 
+
+  const itemBoxColor = (i) => {
+    const colors = {
+      S: 'bg-red-500',
+      M: 'bg-blue-500',
+      L: 'bg-green-500',
+      XL: 'bg-violet-500',
+      XXL: 'bg-orange-500'
+    };
+
+    return colors[i] || 'bg-red-500'; // Default color if not found
+  };
+
+
   const itemColor = (i) => {
     let c;
     if (i === 'S') {
@@ -66,9 +80,14 @@ const Product = () => {
             }
 
           </div>
-          <div className='w-full sm:w-[80%]' >
+          {/* <div className='w-full sm:w-[80%]' >
             <img className='w-full h-auto' src={image} alt="" />
+          </div> */}
+
+          <div className='w-full sm:w-[80%] overflow-hidden'>
+            <img className='w-full h-auto transition-transform duration-700 hover:scale-[190%] cursor-pointer' src={image} alt="" />
           </div>
+
         </div>
         {/* prduct info */}
         <div className="flex-1">
@@ -88,7 +107,7 @@ const Product = () => {
             <p>Select Color</p>
             <div className='flex gap-2' >
               {productData.sizes.map((item, index) => (
-                <button onClick={() => setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? 'border-orange-500' : ''}`} key={index} >{
+                <button style={{ backgroundColor: itemColor(item) }} onClick={() => setSize(item)} className={`text-white border py-2 px-4 ${item === size ? 'border-orange-500' : ''}`} key={index} >{
                   itemColor(item)
 
                 }</button>
