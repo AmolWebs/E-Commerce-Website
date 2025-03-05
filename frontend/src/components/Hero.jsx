@@ -3,7 +3,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className='flex flex-col justify-between sm:flex-row border-gray-400 border' >
+    <div className='lg:flex justify-center ' >
       {/* { 
       // Hero left side
       <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0' >
@@ -31,9 +31,21 @@ const Hero = () => {
       </video> */}
 
 
-<div className="flex justify-center items-center w-screen h-[70vh] overflow-hidden bg-black">
+{/* <div className="flex justify-center items-center w-screen h-[100vh] lg:h-[70vh] overflow-hidden">
   <video
-    className="rotate-90 w-[100vh] h-[1000vw] object-contain"
+    className="md:rotate-90 lg:rotate-90 w-[100vh] h-[1000vw] object-contain"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="/ecom-hero-video.mp4" type="video/mp4" />
+  </video>
+</div> */}
+
+<div className="flex justify-center items-center w-full h-[100vh] lg:h-[70vh] overflow-hidden">
+  <video
+    className="w-full h-full object-contain sm:w-[100vh] sm:h-[1000vw] sm:rotate-90 md:rotate-90 lg:rotate-90"
     autoPlay
     muted
     loop
@@ -42,6 +54,7 @@ const Hero = () => {
     <source src="/ecom-hero-video.mp4" type="video/mp4" />
   </video>
 </div>
+
 
 
 
