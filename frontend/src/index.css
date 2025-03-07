@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 
-/* body{
-  background: linear-gradient(to right, rgb(255, 149, 149), rgb(255, 212, 212))  ;
-} */
+body{
+  background-color : #FAF9F6  ;
+}
 
 
 a.active hr{
