@@ -10,7 +10,7 @@ const Cart = () => {
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
-
+    window.scrollTo(0,0);
     if (products.length > 0) {
       const tempData = [];
       for (const items in cartItems) {
