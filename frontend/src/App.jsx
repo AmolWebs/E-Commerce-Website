@@ -27,14 +27,14 @@ const App = () => {
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] relative' >
 
       <FloatingWhatsApp
-        phoneNumber="8767969429"  // Replace with your WhatsApp number
-        accountName="Support Team" // Name shown in chat
-        avatar="/step-img.jpg " // Optional: profile picture
-        statusMessage="Typically replies within an hour" // Custom status
-        chatMessage="Hello! How can we help you?" // Default chat message
-        allowEsc // Close chat with ESC key
-        allowClickAway // Close chat when clicking outside
-        notification // Show notification badge
+        phoneNumber="8707538404" 
+        accountName="Support Team"
+        avatar="/step-img.jpg "
+        statusMessage="Typically replies within an hour" 
+        chatMessage="Hello! How can we help you?" 
+        allowEsc
+        allowClickAway 
+        notification
       />
       <FloatingInstagramButton /> {/* Add Instagram Button */}
       <ToastContainer />
