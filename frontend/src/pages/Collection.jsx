@@ -97,7 +97,7 @@ const Collection = () => {
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-red-500 w-[100%] h-5 rounded-full"></div>
+                <div className="bg-red-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Red</div>
               </label>
 
             </p>
@@ -112,7 +112,7 @@ const Collection = () => {
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-blue-500 w-[100%] h-5 rounded-full"></div>
+                <div className="bg-green-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Green</div>
               </label>
             </p>
             <p className='flex gap-2' >
@@ -126,7 +126,7 @@ const Collection = () => {
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-green-500 w-[100%] h-5 rounded-full"></div>
+                <div className="bg-pink-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Pink</div>
               </label>
             </p>
           </div>
