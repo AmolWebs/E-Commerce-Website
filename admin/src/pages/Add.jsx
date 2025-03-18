@@ -16,8 +16,8 @@ const Add = ({ token }) => {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
-    const [category, setCategory] = useState('Men');
-    const [subCategory, setSubCategory] = useState('Topwear');
+    const [category, setCategory] = useState('Red');
+    const [subCategory, setSubCategory] = useState('Potli');
     const [bestseller, setBestSeller] = useState(false);
     const [sizes, setSizes] = useState([]);
 
@@ -107,20 +107,19 @@ const Add = ({ token }) => {
 
             <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8' >
                 <div>
-                    <p className='mb-2' >Product category</p>
+                    <p className='mb-2' >Product Color_Category</p>
                     <select onChange={(e) => setCategory(e.target.value)} className='w-full px-3 py-2' >
-                        <option value="Men">Men</option>
-                        <option value="Women">Women</option>
-                        <option value="Kids">Kids</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                        <option value="Pink">Pink</option>
                     </select>
                 </div>
 
                 <div>
-                    <p className='mb-2' >Sub category</p>
+                    <p className='mb-2' >ProductType_SubCategory</p>
                     <select onChange={(e) => setSubCategory(e.target.value)} className='w-full px-3 py-2' >
-                        <option value="Topwear">Topwear</option>
-                        <option value="Bottomwear">Bottomwear</option>
-                        <option value="Winterwear">Winterwear</option>
+                        <option value="Potli">Potli</option>
+                        <option value="Clutch">Clutch</option>
                     </select>
                 </div>
 

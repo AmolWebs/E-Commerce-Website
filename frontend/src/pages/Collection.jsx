@@ -91,13 +91,13 @@ const Collection = () => {
                 {/* Hidden Checkbox */}
                 <input
                   type="checkbox"
-                  value="Men"
+                  value="Red"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-red-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Red</div>
+                <div className={ `bg-red-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Red') ? " text-black " : ""}`}>Red</div>
               </label>
 
             </p>
@@ -106,13 +106,13 @@ const Collection = () => {
                 {/* Hidden Checkbox */}
                 <input
                   type="checkbox"
-                  value="Men"
+                  value="Green"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-green-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Green</div>
+                <div className={ `bg-green-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Green') ? " text-black " : ""}`}>Green</div>
               </label>
             </p>
             <p className='flex gap-2' >
@@ -120,13 +120,13 @@ const Collection = () => {
                 {/* Hidden Checkbox */}
                 <input
                   type="checkbox"
-                  value="Men"
+                  value="Pink"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
 
                 {/* Clickable Div */}
-                <div className="bg-pink-500 w-[100%] h-5 rounded-full text-white font-medium text-center">Pink</div>
+                <div className={ `bg-pink-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Pink') ? " text-black " : ""}`}>Pink</div>
               </label>
             </p>
           </div>
@@ -137,13 +137,10 @@ const Collection = () => {
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700' >
 
             <p className='flex gap-2' >
-              <input className='w-3' type="checkbox" value={'Topwear'} onClick={toggleSubCategory} /> Topwear
+              <input className='w-3' type="checkbox" value={'Potli'} onClick={toggleSubCategory} /> Potli
             </p>
             <p className='flex gap-2' >
-              <input className='w-3' type="checkbox" value={'Bottomwear'} onClick={toggleSubCategory} /> Bottomwear
-            </p>
-            <p className='flex gap-2' >
-              <input className='w-3' type="checkbox" value={'Winterwear'} onClick={toggleSubCategory} /> Winterwear
+              <input className='w-3' type="checkbox" value={'Clutch'} onClick={toggleSubCategory} /> Clutch
             </p>
           </div>
         </div>
