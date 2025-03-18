@@ -54,7 +54,7 @@ const Hero = () => {
     <source src="/ecom-hero-video.mp4" type="video/mp4" />
   </video>
 </div> */}
-<div className="flex flex-col lg:justify-center lg:flex-row items-center w-full lg:h-[100vh] lg:h-[70vh] overflow-hidden">
+<div className="flex flex-col lg:justify-center lg:flex-row items-center w-full lg:h-[70vh] overflow-hidden">
   <img  className='w-full lg:w-1/2 lg:h-[100%] p-5 rounded-[50px]' src="/hero-img-1.jpg" alt="" />
   <img  className='w-full lg:w-1/2 lg:h-[100%] p-5 rounded-[50px] ' src="/hero-img-2.jpg" alt="" />
 </div>
