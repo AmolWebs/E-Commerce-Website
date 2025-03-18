@@ -1,69 +1,90 @@
-import React from 'react'
-// import { assets } from '../assets/assets'
+import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const objHero = [
+  {
+    image: "/hero-img-1.jpg",
+  },
+  {
+    image: "/hero-img-2.jpg",
+  },
+];
+
+// Custom Arrow Components
+const CustomPrevArrow = ({ onClick }) => (
+  <button
+    className="opacity-20 absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10 hover:bg-black/70"
+    onClick={onClick}
+  >
+    <ChevronLeft size={24} />
+  </button>
+);
+
+const CustomNextArrow = ({ onClick }) => (
+  <button
+    className="opacity-20 absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full z-10 hover:bg-black/70"
+    onClick={onClick}
+  >
+    <ChevronRight size={24} />
+  </button>
+);
 
 const Hero = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // Large screens
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768, // Tablets
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Mobile devices
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false, // Hide dots on small screens
+        },
+      },
+    ],
+  };
+
   return (
-    <div className='lg:flex justify-center ' >
-      {/* { 
-      // Hero left side
-      <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0' >
-        <div className='text-[#414141]' >
-          <div className='flex items-center gap-2' >
-            <p className='w-8 md:w-11 h-[2px] bg-[#414141]' ></p>
-            <p className='font-medium text-sm md:text-base'>OUR BESTSELLERS</p>
-          </div>
-          <h1 className='prata-regular text-3xl sm:py-3 lg:text-5xl leading-relaxed' >Fresh Picks</h1>
-          <div className='flex items-center gap-2' >
-            <p className='font-semibold text-sm md:text-base'>SHOP NOW</p>
-            <p className='w-8 md:w-11 h-[2px] bg-[#414141]' ></p>
-          </div>
-        </div>
-      </div> } */}
-
-      {/* <div className="relative flex justify-end w-60 sm:w-1/3">
-        <video className="w-full object-cover h-[90vh]" autoPlay muted loop playsInline>
-          <source src="/ecom-hero-video.mp4" type="video/mp4" />
-        </video>
-      </div> */}
-
-      {/* <video className="bg-red-100 w-1/2 sm:w-1/2 h-[80vh] object-fill" autoPlay muted loop playsInline>
-        <source src="/ecom-hero-video.mp4" type="video/mp4" />
-      </video> */}
-
-
-{/* <div className="flex justify-center items-center w-screen h-[100vh] lg:h-[70vh] overflow-hidden">
-  <video
-    className="md:rotate-90 lg:rotate-90 w-[100vh] h-[1000vw] object-contain"
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-    <source src="/ecom-hero-video.mp4" type="video/mp4" />
-  </video>
-</div> */}
-
-{/* <div className="flex justify-center items-center w-full h-[100vh] lg:h-[70vh] overflow-hidden">
-  <video
-    className="w-full h-full object-contain sm:w-[100vh] sm:h-[1000vw] sm:rotate-90 md:rotate-90 lg:rotate-90"
-    autoPlay
-    muted
-    loop
-    playsInline
-  >
-    <source src="/ecom-hero-video.mp4" type="video/mp4" />
-  </video>
-</div> */}
-<div className="flex flex-col lg:justify-center lg:flex-row items-center w-full lg:h-[70vh] overflow-hidden">
-  <img  className='w-full lg:w-1/2 lg:h-[100%] p-5 rounded-[50px]' src="/hero-img-1.jpg" alt="" />
-  <img  className='w-full lg:w-1/2 lg:h-[100%] p-5 rounded-[50px] ' src="/hero-img-2.jpg" alt="" />
-</div>
-
-
-
-
+    <div className="lg:flex justify-center relative w-full">
+      <div className="w-full">
+        <Slider {...settings}>
+          {objHero.map((item, index) => (
+            <div key={index}>
+              <img
+                className="lg:h-[75vh] w-full object-contain"
+                src={item.image}
+                alt="hero"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

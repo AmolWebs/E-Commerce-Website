@@ -86,62 +86,67 @@ const Collection = () => {
           <p className='mb-3 text-sm font-medium' >COLORS</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700' >
 
-            <p className='flex gap-2' >
+            {/* <p className='flex gap-2' >
               <label className="cursor-pointer w-[30%] ">
-                {/* Hidden Checkbox */}
                 <input
+                  type="checkbox"
+                  value="Red"
+                  onClick={toggleCategory}
+                  className="hidden"
+                />
+
+                <div className={ `bg-red-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Red') ? " text-black " : ""}`}>Red</div>
+              </label>
+
+            </p> */}
+            <label className={`flex items-center gap-3 border-2 rounded-md  p-2  w-1/2 cursor-pointer ${category.includes('Red') ? " border-black " : ""} ` }>
+              <div className='h-8 w-9 rounded-md bg-red-500' >
+
+              </div>
+              <input
                   type="checkbox"
                   value="Red"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
+              <div className={ `h-5 rounded-full  font-medium text-center}`}>Red</div>
+            </label>
+            <label className={`flex items-center gap-3 border-2 rounded-md  p-2  w-1/2 cursor-pointer ${category.includes('Green') ? " border-black " : ""} ` }>
+              <div className='h-8 w-9 rounded-md bg-green-500' >
 
-                {/* Clickable Div */}
-                <div className={ `bg-red-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Red') ? " text-black " : ""}`}>Red</div>
-              </label>
-
-            </p>
-            <p className='flex gap-2' >
-            <label className="cursor-pointer w-[30%] ">
-                {/* Hidden Checkbox */}
-                <input
+              </div>
+              <input
                   type="checkbox"
                   value="Green"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
+              <div className={ `h-5 rounded-full  font-medium text-center`}>Green</div>
+            </label>
+            <label className={`flex items-center gap-3 border-2 rounded-md  p-2  w-1/2 cursor-pointer ${category.includes('Pink') ? " border-black " : ""} ` }>
+              <div className='h-8 w-9 rounded-md bg-pink-500' >
 
-                {/* Clickable Div */}
-                <div className={ `bg-green-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Green') ? " text-black " : ""}`}>Green</div>
-              </label>
-            </p>
-            <p className='flex gap-2' >
-            <label className="cursor-pointer w-[30%] ">
-                {/* Hidden Checkbox */}
-                <input
+              </div>
+              <input
                   type="checkbox"
                   value="Pink"
                   onClick={toggleCategory}
                   className="hidden" // Hides the checkbox
                 />
-
-                {/* Clickable Div */}
-                <div className={ `bg-pink-500 w-[100%] h-5 rounded-full text-white font-medium text-center ${category.includes('Pink') ? " text-black " : ""}`}>Pink</div>
-              </label>
-            </p>
+              <div className={ `h-5 rounded-full  font-medium text-center`}>Pink</div>
+            </label>
           </div>
         </div>
         {/* subcategory filter   */}
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? '' : 'hidden'} sm:block`} >
           <p className='mb-3 text-sm font-medium' >TYPE</p>
           <div className='flex flex-col gap-2 text-sm font-light text-gray-700' >
-
-            <p className='flex gap-2' >
+            <label className='cursor-pointer flex gap-2' >
               <input className='w-3' type="checkbox" value={'Potli'} onClick={toggleSubCategory} /> Potli
-            </p>
-            <p className='flex gap-2' >
+            </label>
+            <label className='cursor-pointer flex gap-2' >
               <input className='w-3' type="checkbox" value={'Clutch'} onClick={toggleSubCategory} /> Clutch
-            </p>
+            </label>
           </div>
         </div>
       </div>
