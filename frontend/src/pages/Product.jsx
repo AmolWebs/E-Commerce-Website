@@ -42,30 +42,30 @@ const Product = () => {
   };
 
 
-  const itemColor = (i) => {
-    let c;
-    if (i === 'S') {
-      c = 'Red'
-    }
-    else if (i === 'M') {
-      c = 'Blue'
-    }
+  // const itemColor = (i) => {
+  //   let c;
+  //   if (i === 'S') {
+  //     c = 'Red'
+  //   }
+  //   else if (i === 'M') {
+  //     c = 'Blue'
+  //   }
 
-    else if (i === 'L') {
-      c = 'Green'
-    }
-    else if (i === 'XL') {
-      c = 'Violet'
-    }
+  //   else if (i === 'L') {
+  //     c = 'Green'
+  //   }
+  //   else if (i === 'XL') {
+  //     c = 'Violet'
+  //   }
 
-    else if (i === 'XXL') {
-      c = 'Orange'
-    }
-    else {
-      c = 'Red'
-    }
-    return c;
-  }
+  //   else if (i === 'XXL') {
+  //     c = 'Orange'
+  //   }
+  //   else {
+  //     c = 'Red'
+  //   }
+  //   return c;
+  // }
 
   return productData ? (
     <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100' >
@@ -108,9 +108,8 @@ const Product = () => {
             <p>Select Color</p>
             <div className='flex gap-2' >
               {productData.sizes.map((item, index) => (
-                <button style={{ backgroundColor: itemColor(item) }} onClick={() => setSize(item)} className={`text-white border py-2 px-4 ${item === size ? 'border-orange-500' : ''}`} key={index} >{
-                  itemColor(item)
-
+                <button style={{ backgroundColor: item }} onClick={() => setSize(item)} className={`text-white py-2 px-4 border-2 rounded-md  ${item === size ? 'border-gray-700' : ''}`} key={index} >{
+                  item
                 }</button>
               ))}
             </div>
