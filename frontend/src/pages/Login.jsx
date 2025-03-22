@@ -72,7 +72,7 @@ const Login = () => {
       <input type="email" className='w-full px-3 py-2 border border-gray-800' placeholder='Email' onChange={(e) => setEmail(e.target.value)} value={email} required />
       <input type="password" className='w-full px-3 py-2 border border-gray-800' placeholder='Password' onChange={(e) => setPassword(e.target.value)} value={password} required />
       <div className='w-full flex justify-between text-sm mt-[-8px]'>
-        <p className='cursor-pointer' >Forgot your password?</p>
+        <p className='cursor-pointer text-red-500' >*password should contains atleast 8 letters</p>
         {
           currentState === 'Login' 
           ? <p onClick={() => setCurrentState('Sign Up')} className='cursor-pointer' >Create account</p> 
