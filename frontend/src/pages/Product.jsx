@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
 import RelatedProducts from '../components/RelatedProducts'
+import ReactImageMagnify from 'react-image-magnify';
 
 const Product = () => {
   const { productId } = useParams()
@@ -85,8 +86,28 @@ const Product = () => {
             <img className='w-full h-auto' src={image} alt="" />
           </div> */}
 
-          <div className='w-full sm:w-[80%] overflow-hidden'>
-            <img className='w-full h-auto transition-transform duration-700 hover:scale-[190%] cursor-pointer' src={image} alt="" />
+          <div>
+          <div>
+                    <ReactImageMagnify {...{
+                         smallImage: {
+                            alt: 'Wristwatch by Ted Baker London',
+                            isFluidWidth: true,
+                            src: image,
+                            // srcSet: this.srcSet,
+                            sizes: '(max-width: 480px) 0vw, (max-width: 1200px) 30vw, 360px'
+                        },
+                        largeImage: {
+                            src: image,
+                            width: 2000,
+                            height: 2000
+                        },
+                        enlargedImageContainerDimensions: {
+                            width: '200%',
+                            height: '100%'
+                        },
+                        enlargedImageContainerDimensions: window.innerWidth <= 768 ? { width: "0%", height: "0%" } : { width: "200%", height: "100%" },
+                    }} />
+                </div>
           </div>
 
         </div>
