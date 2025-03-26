@@ -101,10 +101,6 @@ const Product = () => {
                             width: 2000,
                             height: 2000
                         },
-                        enlargedImageContainerDimensions: {
-                            width: '200%',
-                            height: '100%'
-                        },
                         enlargedImageContainerDimensions: window.innerWidth <= 768 ? { width: "0%", height: "0%" } : { width: "200%", height: "100%" },
                     }} />
                 </div>
